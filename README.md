@@ -10,3 +10,4 @@ Suite d'exercices (11) pour découvrir l'algorithmique et le JavaScript
 4. Ouvrir un navigateur sur index.html pour obtenir la liste des exercices et exécuter chacun d'entre eux
 5. Une fois terminés les 11 exercices, pousser votre dépôt local vers votre compte GitHub
 
+# algo_js_ML
