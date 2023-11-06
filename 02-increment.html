@@ -26,11 +26,14 @@
 </div>
 
 <script type="text/javascript">
+    // cette fonction indique un nombre+1
     function incrementNumber() {
+        // indique le premier numéro
         let number = document.getElementById("number").value;
-
-        // CODE HERE !
-        /* l'idée ici est de fixer un numéro a auquel est ajouté +1 quand le bouton est clique*/
+        number = Number(number) + 1;
+        let message = "Votre nouveau nombre chance est " + number;
+        
+        alert(message)
     }
 </script>
 </body>
