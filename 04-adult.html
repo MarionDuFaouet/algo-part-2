@@ -40,14 +40,12 @@
         function verifyAge() {
             let age = document.getElementById("age").value; 
             if (age <18) {
-                alert(message);
                 let message = "Vous devez être majeur pour accèder au site !";//chaîne de caractères""
-            } 
+            }  
             else {
-                alert(message);
                 let message = "Bienvenue sur le site";
             }
-            
+            alert(message);
             /*
              * déplacer mon alert? "Mon alert n'est vivante que pour la zone 
              * où elle est déclarée (portée de la variable)".
