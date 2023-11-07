@@ -39,16 +39,17 @@
     <script type="text/javascript">
         function verifyAge() {
             let age = document.getElementById("age").value;
-            if (age = Number <18) {
-                let message "Vous devez être majeur pour accèder au site !";
+            age=Number
+            if (Number <18) {
+                let message "Vous devez être majeur pour accèder au site !";//chaîne de caractères""
             } 
             else {
                 let message "Bienvenue sur le site";
             }
             alert(message);
             /*
-             * déplacer mon alert? Mon alert n'est vivante que pour la zone 
-             * où elle est déclarée (portée de la variable).
+             * déplacer mon alert? "Mon alert n'est vivante que pour la zone 
+             * où elle est déclarée (portée de la variable)".
              * il manque des = , mes affectations sont mal écrites
              */
         }
