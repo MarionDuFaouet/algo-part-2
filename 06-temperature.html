@@ -33,11 +33,11 @@
 
     <script type="text/javascript">
 
-
+const MELTING_POINT = 12;
         function solidOrLiquid() {
             let temperature = document.getElementById("temperature").value
-            const MELTING_POINT = 12;
-            if (température > MELTING_POINT) {
+            
+            if (temperature > MELTING_POINT) {
                 alert("C'est de l'eau liquide !");
             } else {
                 alert("C'est de la glace !")
