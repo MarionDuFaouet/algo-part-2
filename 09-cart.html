@@ -50,13 +50,13 @@
          */
         function cartValue() {
             // récupération de #articles
-            let articles = document.getElementById("articles").value;
+            let articles = document.getElementById("articles");
             // création et récupération de la valeur de l'option sélectionnée dans #articles.option
             let selectedArticle = articles.options[articles.selectedIndex].value;
             //ici je récupère les données entrées dans le champ promotion
             let promotion = document.getElementById("promotion").value;
 
-            if (selectedArticles == "one" && promotion === VALID_PROMOTION_CODE)
+            if (selectedArticle == "one" && promotion === VALID_PROMOTION_CODE)
                 alert("La valeur de votre panier est de 27€");
 
             else if (selectedArticle == "one")
@@ -71,7 +71,11 @@
             else (selectdArticle == "")
                 alert("Sélectionnez un article")
         }
-        //la console m'indique un article.options undifiened
+        /* 
+         * la console m'indique un article.options undifined
+         * pb corrigé!!!! J'avais collé un .value à ma variable articles...
+         * Why???
+         */
 
     </script>
 </body>
