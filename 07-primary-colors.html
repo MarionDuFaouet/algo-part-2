@@ -41,6 +41,7 @@
         function primaryColors() {
             let colors = document.getElementById("colors");
             let secondaryColor = colors.options[colors.selectedIndex].value;
+
             if (secondaryColor == "green") {
                 alert("Le vert est composé de bleu et de jaune")
             }
@@ -50,13 +51,32 @@
             else if (secondaryColor == "orange") {
                 alert("L\'orange est composé de rouge et de jaune")
             }
+            else {
+                alert("Cette couleur n'est pas valide :/")
+            }
+            
         }
 
-        // CODE HERE !
-        /*
-         *mon message d'alert est toujours orange... Pourquoi? 
-         la clause else est connectée à la if la plus proche.
-         alors 
+        /*function primaryColors() {
+            let colors = document.getElementById("colors");
+            let secondaryColor = colors.options[colors.selectedIndex].value;
+            if (secondaryColor === "green") {
+                alert("Vert est composé de bleu et de jaune")
+            }
+            else if (secondaryColor === "purple") {
+                alert("Violet est composé de bleu et de rouge")
+            }
+            else if (secondaryColor === "orange") {
+                alert("Orange est composé de rouge et de jaune")
+            }
+            else {
+                alert("Cette couleur n'est pas valide :/")
+            }
+         * Méthode lourde et pas très belle
+         * Autre proposition : le switch!
+         * switch
+         * 
+         * 
          */
 
     </script>
