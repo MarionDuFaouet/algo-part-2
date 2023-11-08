@@ -41,11 +41,13 @@
         function primaryColors() {
             let colors = document.getElementById("colors");
             let secondaryColor = colors.options[colors.selectedIndex].value;
-            if (colors == Vert)
+            if (colors === "Vert")
                 alert("Le vert est composé de bleu et de jaune")
-            else if (colors == Violet)
+
+            else if (colors === "Violet")
                 alert("Le violet est composé de bleu et de rouge")
-            else (colors == Orange)
+            
+            else (colors === "Orange")
                 alert("L'orange est composé de rouge et de jaune")
 
             // CODE HERE !
