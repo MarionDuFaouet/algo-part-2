@@ -35,16 +35,23 @@
          * Permet de longs commentaires
          * sans se déplacer sur l'écran.
          */
+        // 
         function displayMessage() {
-            // variable prénom
+            /*
+             * variable prénom. document.getElementtById va 
+             * chercher(document) l'info id ("firstname) nommée dans l'html 
+             * et la rapporte (.getElementById)
+             * get value of element whose id is firstname 
+             * Récupération de l'élément identifer par l'élément firstname
+             */
             let firstname = document.getElementById("firstname").value;
-            // variable nom
+            // la même en bleu
             let lastname = document.getElementById("lastname").value;
-            // variable nom complet
+            // lastname, méthode de type string , méthode appliquée toUpperCase
             let fullname = firstname + " " + lastname.toUpperCase();
-            // variable message
+            // agrégation de chaine entre bonjour et fullname
             let message = "Bonjour " + fullname;
-            //on affiche message grace à la fonction alert
+            //récupère et affiche dans un pop up la variable message
             alert(message)
         }
     </script>

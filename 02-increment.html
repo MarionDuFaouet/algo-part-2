@@ -30,7 +30,12 @@
     function incrementNumber() {
         // variable qui intègre le premier numéro
         let number = document.getElementById("number").value;
-        // affecte nouvelle valeur à number
+        /* la propriété Number change le type de la valeur(de string en number)
+         * j'aurai aussi pu ajouter la propriété parseInt juste avantdocument :
+         * let number = parsint(document.getElementById("number").value);
+         * et rappeler la fonction après (la fonction)
+         * incrementNumbert("");
+         */
         number = Number(number) + 1;
         // variable qui joue le resultat
         let message = "Votre nouveau nombre chance est " + number;
