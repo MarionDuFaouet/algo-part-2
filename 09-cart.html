@@ -1,59 +1,74 @@
 <!doctype html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Exo d'Algo - Cart !</title>
     <link href="./bootstrap.min.css" rel="stylesheet" />
     <link href="./style.css" rel="stylesheet" />
 </head>
+
 <body>
-<a href="index.html">← revenir à la liste des exos</a>
-<div class="card">
-    <p class="h6 font-weight-bold text-center">#09 - Panier</p>
-    <div class="instructions">
-        <p class="text-secondary">Votre mission si toutefois vous l'acceptez, est de vérifier la concordance des mots de passes :</p>
+    <a href="index.html">← revenir à la liste des exos</a>
+    <div class="card">
+        <p class="h6 font-weight-bold text-center">#09 - Panier</p>
+        <div class="instructions">
+            <p class="text-secondary">Votre mission si toutefois vous l'acceptez, est de vérifier la concordance des
+                mots de passes :</p>
+            <br />
+            <p class="text-secondary">Vous devez retourner la valeur de votre panier</p>
+            <p class="text-secondary">Si je sélectionne <i class="text-dark">Une formation sur javascript (30€)</i> avec
+                le bon code de promotion, j'obtiendrai :</p>
+            <p class="text-success">"La valeur de votre panier est de 27€"</p>
+        </div>
+
+        <select name="article" id="articles">
+            <option value="">--Sélectionner un article--</option>
+            <option value="one">Une formation sur javascript (30€)</option>
+            <option value="two">Deux formations sur javascript (50€)</option>
+        </select>
+
+        <label>Code de réduction (10% de réduction)</label>
         <br />
-        <p class="text-secondary">Vous devez retourner la valeur de votre panier</p>
-        <p class="text-secondary">Si je sélectionne <i class="text-dark">Une formation sur javascript (30€)</i> avec le bon code de promotion, j'obtiendrai :</p>
-        <p class="text-success">"La valeur de votre panier est de 27€"</p>
+        <input type="text" id="promotion" />
+        <br />
+        <button type="button" class="btn btn-primary" onclick="cartValue()">
+            Connaître la valeur de mon panier
+        </button>
     </div>
 
-    <select name="article" id="articles">
-        <option value="">--Sélectionner un article--</option>
-        <option value="one">Une formation sur javascript (30€)</option>
-        <option value="two">Deux formations sur javascript (50€)</option>
-    </select>
+    <script type="text/javascript">
+        //variable 
+        const VALID_PROMOTION_CODE = "10POUR100";
 
-    <label>Code de réduction (10% de réduction)</label>
-    <br/>
-    <input type="text" id="promotion" />
-    <br/>
-    <button type="button" class="btn btn-primary" onclick="cartValue()">
-        Connaître la valeur de mon panier
-    </button>
-</div>
-
-<script type="text/javascript">
-    const VALID_PROMOTION_CODE = "10POUR100";
-
-    function cartValue() {
-        let articles = document.getElementById("articles");
-        let selectedArticle = articles.options[articles.selectedIndex].value;
-
-        // CODE HERE !
         /*
-         * récupérer article
-         * si = 30
-         * afficher "La valeur de votre panier est de 27€"
-         * else = 50
-         * afficher "La valeur de votre panier est de 45€"
-         * "La valeur de votre panier est de 30€"
-         * "La valeur de votre panier est de 50€"
-        */
-    }
-</script>
+         * fonction qui va afficher le bon texte selon concordance 
+         * entre la sélection et la condition const
+         */
+        function cartValue() {
+            // récupération de la sélection d'article
+            let articles = document.getElementById("articles").value;
+            // index de l'option sélectionné
+            let selectedArticle = articles.options[articles.selectedIndex].value;
+
+            if (selectedArticle == "one" && VALID_PROMOTION_CODE)
+                alert("La valeur de votre panier est de 27€");
+            else if (selectedArticle == "one")
+                alert("La valeur de votre panier est de 30€");
+
+            else if (selectedArticle == "two" && VALID_PROMOTION_CODE)
+                alert("La valeur de votre panier est de 45€");
+            else if (selectedArticle == "two")
+                alert("La valeur de votre panier est de 50€");
+
+            else if (selectdArticle == "")
+            alert("Sélectionnez un article")
+        }
+
+    </script>
 </body>
+
 </html>

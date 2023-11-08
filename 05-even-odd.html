@@ -34,11 +34,13 @@
 </div>
 
 <script type="text/javascript">
+    //fonction pour voir si le number est pair ou impair
     function evenOrOdd() {
+        // ici je récupère 
         let number = document.getElementById("number").value;
         /*
          * J'ai trouvé la formule 
-         * modulo ailleurs sans la comprendre...
+         * modulo dans la doc sans la comprendre...
          */
         if (number % 2 == 0)
         alert(number + " est pair");
@@ -46,22 +48,6 @@
         else
         alert(number + " est impair")
     }
-
-    /* 
-     * Correction
-     * Division enclidienne ou entière : 5=(2*2) + 1
-     * 5/2 = 2.5
-     * 5 % 2 = 1 (c'est le reste de la division)
-     * 
-     * function envenOrOdd(){
-     * let number = document.getElementsById("number").value
-     * 
-     * if (number % 2 ===0) {
-     * alert(number + " est pair");
-     * } else {
-     * alert(number + " est impair");
-     * }
-     */ 
 
 </script>
 </body>
