@@ -30,23 +30,23 @@
     </div>
 
     <script type="text/javascript">
-    /*
-     * Multiline comment. 
-     * This function allows you 
-     * to display a personalized message.
-     */
-    function displayMessage() {
-        // this is the firstname value
-        let firstname = document.getElementById("firstname").value;
-        // this is the lastname value
-        let lastname = document.getElementById("lastname").value;
-        // this is firstname plus un espace plus lastname value
-        let fullname = firstname + " " + lastname.toUpperCase();
-        // this displays the hello message plus the name
-        let message = "Bonjour " + fullname;
-
-        alert(message) //on affiche message grace à la fonction alert
-    }
+        /*
+         * Commentaire multiligne. 
+         * Permet de longs commentaires
+         * sans se déplacer sur l'écran.
+         */
+        function displayMessage() {
+            // variable prénom
+            let firstname = document.getElementById("firstname").value;
+            // variable nom
+            let lastname = document.getElementById("lastname").value;
+            // variable nom complet
+            let fullname = firstname + " " + lastname.toUpperCase();
+            // variable message
+            let message = "Bonjour " + fullname;
+            //on affiche message grace à la fonction alert
+            alert(message)
+        }
     </script>
 </body>
 
