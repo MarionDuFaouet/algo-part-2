@@ -49,24 +49,29 @@
          * entre la sélection et la condition const
          */
         function cartValue() {
-            // récupération de la sélection d'article
+            // récupération de #articles
             let articles = document.getElementById("articles").value;
-            // index de l'option sélectionné
+            // création et récupération de la valeur de l'option sélectionnée dans #articles.option
             let selectedArticle = articles.options[articles.selectedIndex].value;
+            //ici je récupère les données entrées dans le champ promotion
+            let promotion = document.getElementById("promotion").value;
 
-            if (selectedArticle == "one" && VALID_PROMOTION_CODE)
+            if (selectedArticles == "one" && promotion === VALID_PROMOTION_CODE)
                 alert("La valeur de votre panier est de 27€");
+
             else if (selectedArticle == "one")
                 alert("La valeur de votre panier est de 30€");
 
-            else if (selectedArticle == "two" && VALID_PROMOTION_CODE)
+            else if (selectedArticle == "two" && promotion === VALID_PROMOTION_CODE)
                 alert("La valeur de votre panier est de 45€");
+
             else if (selectedArticle == "two")
                 alert("La valeur de votre panier est de 50€");
 
-            else if (selectdArticle == "")
-            alert("Sélectionnez un article")
+            else (selectdArticle == "")
+                alert("Sélectionnez un article")
         }
+        //la console m'indique un article.options undifiened
 
     </script>
 </body>
