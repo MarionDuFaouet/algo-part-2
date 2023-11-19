@@ -44,27 +44,41 @@
             //ici sont indexées les trois options possibles
             let secondaryColor = colors.options[colors.selectedIndex].value;
 
-            if (secondaryColor == "green") {
-                alert("Le vert est composé de bleu et de jaune")
+            //METHODE SWITCH
+            switch (secondaryColor) {
+                case (secondaryColor = "green"):
+                    alert("Le vert est composé de bleu et de jaune");
+                    break;
+                case (secondaryColor = "purple"):
+                    alert("Le violet est composé de bleu et de rouge");
+                    break;
+                case (secondaryColor = "orange"):
+                    alert("L\'orange est composé de rouge et de jaune");
+                    break;
             }
-            else if (secondaryColor == "purple") {
-                alert("Le violet est composé de bleu et de rouge")
-            }
-            else if (secondaryColor == "orange") {
-                alert("L\'orange est composé de rouge et de jaune")
-            }
-            else {
-                alert("Cette couleur n'est pas valide :/")
-            }
-            
+
+
+            //METHODE IF ELSE
+            //ici je récupère la valeur choisi dans le menu déroulant
+            // let colors = document.getElementById("colors");
+            // //ici sont indexées les trois options possibles
+            // let secondaryColor = colors.options[colors.selectedIndex].value;
+
+            // if (secondaryColor == "green") {
+            //     alert("Le vert est composé de bleu et de jaune")
+            // }
+            // else if (secondaryColor == "purple") {
+            //     alert("Le violet est composé de bleu et de rouge")
+            // }
+            // else if (secondaryColor == "orange") {
+            //     alert("L\'orange est composé de rouge et de jaune")
+            // }
+            // else {
+            //     alert("Cette couleur n'est pas valide :/")
+            // }
+
         }
 
-        /*
-         * Méthode lourde et pas très belle
-         * Autre proposition : le switch!
-         * switch à étudier
-         * 
-         */
 
     </script>
 </body>

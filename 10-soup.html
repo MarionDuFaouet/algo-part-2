@@ -66,8 +66,6 @@
     <script type="text/javascript">
 
 
-        // problème de sous-catégorie et de logique marion, à revoir
-
         function isPoisoned() {
             let vitriol = document.getElementById("vitriol").checked;
             let cyanide = document.getElementById("cyanide").checked;
@@ -94,12 +92,6 @@
                 case isPoisoned():
                     alert("Game over");
                     break;
-                /*
-                 * L'instruction break peut optionnellement être utilisée pour chaque cas 
-                 * et permet de s'assurer que seules les instructions associées à ce cas seront exécutées. 
-                 * Si break n'est pas utilisé, le programme continuera son exécution avec 
-                 * les instructions suivantes (des autres cas de l'instruction switch).
-                 */
 
                 case (isSalty() && !isSweet()):
                     alert("Hum la bonne sou-soupe salée !");
@@ -116,9 +108,9 @@
                 default :
                     alert("Mange ta soupe !");
             }
+            //METHODE IF ELSE
             // if (isPoisoned()) {
             // alert("Game Over");
-
 
             // } else if (isSalty () && isSweet()) {
             //     alert("Beurk... c'est pas bon !");
@@ -136,7 +128,6 @@
             //     alert("Mange ta soupe !")
             // }
         }
-        //essayer la méthode switch, depuis la doc msn
     </script>
 </body>
 
