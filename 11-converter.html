@@ -1,55 +1,70 @@
 <!doctype html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Exo d'Algo - Converter !</title>
     <link href="./bootstrap.min.css" rel="stylesheet" />
     <link href="./style.css" rel="stylesheet" />
 </head>
+
 <body>
-<a href="index.html">← revenir à la liste des exos</a>
-<div class="card">
-    <p class="h6 font-weight-bold text-center">#11 - Convertisseur</p>
-    <div class="instructions">
-        <p class="text-secondary">Votre mission si toutefois vous l'acceptez, est de faire un convertisseur EUR/USD en partant de presque rien !</p>
+    <a href="index.html">← revenir à la liste des exos</a>
+    <div class="card">
+        <p class="h6 font-weight-bold text-center">#11 - Convertisseur</p>
+        <div class="instructions">
+            <p class="text-secondary">Votre mission si toutefois vous l'acceptez, est de faire un convertisseur EUR/USD
+                en partant de presque rien !</p>
+            <br />
+            <p class="text-secondary">Si je rentre <i class="text-dark">10 Euros</i> mon programme retourne <i
+                    class="text-dark">10 Euros -> 10.79 Dollars</i></p>
+            <p class="text-secondary">Si je rentre <i class="text-dark">10 Dollars</i> mon programme retourne <i
+                    class="text-dark">10 Dollars -> 9.32 Euros</i></p>
+            <p class="text-secondary">La valeur doit-être arrondi à deux chiffres après la virgule</p>
+        </div>
+
+        <label>Entrez une valeur</label>
         <br />
-        <p class="text-secondary">Si je rentre <i class="text-dark">10 Euros</i> mon programme retourne <i class="text-dark">10 Euros -> 10.79 Dollars</i></p>
-        <p class="text-secondary">Si je rentre <i class="text-dark">10 Dollars</i> mon programme retourne <i class="text-dark">10 Dollars -> 9.32 Euros</i></p>
-        <p class="text-secondary">La valeur doit-être arrondi à deux chiffres après la virgule</p>
+        <input type="text" id="value" />
+
+        <select name="currency" id="currencies">
+            <option value="eur" selected="selected">Euros</option>
+            <option value="usd">Dollars</option>
+        </select>
+
+        <br />
+        <button type="button" class="btn btn-primary" onclick="convert()">
+            Connaître la valeur en USD->EUR ou EUR->USD
+        </button>
     </div>
 
-    <label>Entrez une valeur</label>
-    <br/>
-    <input type="text" id="value" />
+    <script type="text/javascript">
 
-    <select name="currency" id="currencies">
-        <option value="eur" selected="selected">Euros</option>
-        <option value="usd">Dollars</option>
-    </select>
+        //fonction qui va convertir euros en usd
+        function convert() {
+            //je récupère la donnée number entrée dans l'#value 
+            let value = document.getElementById("value").value;
+            //je récupère la valeur string eur ou usd
+            let currency = document.getElementById("currencies").value;
+            //variable qui va convertir l'euro en dollars
+            const EURO_TO_USD = 1.0729
 
-    <br/>
-    <button type="button" class="btn btn-primary">
-        Connaître la valeur en USD->EUR ou EUR->USD
-    </button>
-</div>
-
-<script type="text/javascript">
-    // 1 EUR = 1.0729 USD
-    
-    /* récuper les valeurs #currencies
-     * créer variable euros
-     * créer variable dollars
-     * créer fonction conversion
-     * si Euros
-     * diviser par 0.932
-     * envoyer alert "euros" "->"" dollars"
-     * si USD
-     * multiplier par 0.932 
-     * envoyer alert "dollars""->""euros"
-     */
-</script>
+            /* 
+             * Number.parseFloat = objet de type number associé à la méthode parseFloat, 
+             * qui va arrondir à deux chiffres après la virgule
+             */
+            if (currency === "eur") 
+                alert( value + " euros " +  "-->" + Number.parseFloat(value * EURO_TO_USD).toFixed(2) + " usd");
+            
+            
+            else (currency === "usd") 
+                alert( value + " dollars" + "-->" + Number.parseFloat(value / EUR_TO_USD).toFixed(2) + " euros");
+            
+        }
+    </script>
 </body>
+
 </html>
