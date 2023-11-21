@@ -39,16 +39,18 @@
     <script type="text/javascript">
         //ouvre la fonction
         function verifyAge() {
-            //récupère la valeur
+            //variable qui récupère la valeur #age
             let age = document.getElementById("age").value;
-            //méthode if else
-            if (age < 18)
-            //message joué 
-                alert("Vous devez être majeur pour accèder au site !");
-
+            //méthode if else va vérifier l'age et afficher message en conséquence
+            if (isNaN(age) || " ")
+                alert("Veuillez entrer un nombre");
+            else if (age < 18)
+                alert("Vous devez être majeur pour accéder au site");
             else
                 alert("Bienvenue sur le site");
         }
+
+
 
 
     </script>

@@ -40,7 +40,7 @@
     <script type="text/javascript">
         function primaryColors() {
             //ici je récupère la valeur choisi dans le menu déroulant
-            let colors = document.getElementById("colors");
+            let color = document.getElementById("colors");
             //ici sont indexées les trois options possibles
             let secondaryColor = colors.options[colors.selectedIndex].value;
 
@@ -50,33 +50,30 @@
                     alert("Le vert est composé de bleu et de jaune");
                     break;
                 case (secondaryColor = "purple"):
-                    alert("Le violet est composé de bleu et de rouge");
+                    alert("le violet est composé de rouge et de bleu");
                     break;
                 case (secondaryColor = "orange"):
-                    alert("L\'orange est composé de rouge et de jaune");
+                    alert("l\'orange est compsé de jaune et de rouge");
                     break;
             }
+            /* méthode switch syntaxe
+             * case (condition =):
+             * paramètre(s);
+             * break;
+             */
 
 
             //METHODE IF ELSE
-            //ici je récupère la valeur choisi dans le menu déroulant
-            // let colors = document.getElementById("colors");
-            // //ici sont indexées les trois options possibles
-            // let secondaryColor = colors.options[colors.selectedIndex].value;
+            // if (secondaryColor == "green")
+            // alert("Le vert est composé de bleu et de jaune")
 
-            // if (secondaryColor == "green") {
-            //     alert("Le vert est composé de bleu et de jaune")
-            // }
-            // else if (secondaryColor == "purple") {
-            //     alert("Le violet est composé de bleu et de rouge")
-            // }
-            // else if (secondaryColor == "orange") {
-            //     alert("L\'orange est composé de rouge et de jaune")
-            // }
-            // else {
-            //     alert("Cette couleur n'est pas valide :/")
-            // }
+            // else if (secondaryColor == "purple")
+            // alert("le violet est composé de rouge et de bleu")
 
+            // else if (secondaryColor == "orange")
+            // alert("l\'orange est compsé de jaune et de rouge")
+
+            // else("Veuillez choisir une couleur")
         }
 
 

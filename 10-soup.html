@@ -87,47 +87,47 @@
             return black_chocolate || white_chocolate;
         }
         function doYouLikeIt() {
-            switch (true) {
 
-                case isPoisoned():
-                    alert("Game over");
-                    break;
+            // //METHODE SWITCH
+            // switch (true) {
+            //     case isPoisoned():
+            //         alert("Game over");
+            //         break;
 
-                case (isSalty() && !isSweet()):
-                    alert("Hum la bonne sou-soupe salée !");
-                    break;
+            //     case (isSalty() &&!(isSweet())):
+            //         alert("Hum la bonne sou-soupe salée");
+            //         break;
 
-                case (isSweet() && !isSweet()):
-                    alert("Hum la bonne sou-soupe sucrée !");
-                    break;
+            //     case (isSweet() &&!(isSalty())):
+            //         alert("Hum la bonne sou-soupe sucrée");
+            //         break;
 
-                case (isSweet() && isSalty()):
-                    alert("Beurk c'est pas bon...");
-                    break;
+            //     case (isSalty() && isSweet()):
+            //         alert("Beurk c'est pas pas bon");
+            //         break;
 
-                default :
-                    alert("Mange ta soupe !");
-            }
+            //         default :
+            //         alert("Mange ta soupe!");
+            //         break;
+            // }
+
+
             //METHODE IF ELSE
-            // if (isPoisoned()) {
-            // alert("Game Over");
-
-            // } else if (isSalty () && isSweet()) {
-            //     alert("Beurk... c'est pas bon !");
-
-            // } else if (isSalty() || isSweet()) { //sous catégorie de else if!!!
-
-            //     if (isSalty()) {
-            //         alert("Hum la bonne sou-soupe salée !");
-            //     } else {
-            //         alert("Hum la bonne sou-soupe sucrée !");
-            //     }
-            // }
-
-            // else {
-            //     alert("Mange ta soupe !")
-            // }
+            if (isPoisoned()) {
+                alert("Game over");
+            } else if (isSalty() && isSweet()) {
+                alert("Beurk c'est pas bon")
+            } else if (isSalty() || isSweet()) {
+                if (isSalty()) {
+                    alert("Hum la bonne sou-soupe salée")
+                } else
+                    alert("Hum la bonne sou-soupe sucrée")
+            }
+            else {
+                alert("Mange ta soupe!")
+            }
         }
+
     </script>
 </body>
 

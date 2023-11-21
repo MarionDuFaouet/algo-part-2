@@ -16,8 +16,9 @@
     <div class="card">
         <p class="h6 font-weight-bold text-center">#09 - Panier</p>
         <div class="instructions">
-            <p class="text-secondary">Votre mission si toutefois vous l'acceptez, est de vérifier la concordance des
-                mots de passes :</p>
+            <p class="text-secondary">Votre mission si toutefois vous l'acceptez,
+                est d'afficher un message comprenant une valeur calculée en fonction de la sélection du panier et
+                du code promotion entré. :</p>
             <br />
             <p class="text-secondary">Vous devez retourner la valeur de votre panier</p>
             <p class="text-secondary">Si je sélectionne <i class="text-dark">Une formation sur javascript (30€)</i> avec
@@ -41,36 +42,37 @@
     </div>
 
     <script type="text/javascript">
-        //variable 
-        const VALID_PROMOTION_CODE = "10POUR100";
+
 
         /*
          * fonction qui va afficher le bon texte selon concordance 
          * entre la sélection et la condition const
          */
         function cartValue() {
+            //variable qui défini valid_promotion_code
+            const VALID_PROMOTION_CODE = "10POUR100";
             // récupération de #articles
             let articles = document.getElementById("articles");
             // récupération de la valeur de l'option sélectionnée dans #articles.option
             let selectedArticle = articles.options[articles.selectedIndex].value;
             //ici je récupère les données entrées dans le champ promotion
             let promotion = document.getElementById("promotion").value;
+            //variable qui va afficher le prix dans le message
+            let price;
 
-            if (selectedArticle == "one" && promotion === VALID_PROMOTION_CODE)
-                alert("La valeur de votre panier est de 27€");
+            //méthode qui va comparer les différentes options/promotion
+            
+            if (selectedArticle === "one") {
+                price = 30;
+            }
+            else
+                price = 50;
 
-            else if (selectedArticle == "one")
-                alert("La valeur de votre panier est de 30€");
-
-            else if (selectedArticle == "two" && promotion === VALID_PROMOTION_CODE)
-                alert("La valeur de votre panier est de 45€");
-
-            else if (selectedArticle == "two")
-                alert("La valeur de votre panier est de 50€");
-
-            else //le dernier else n'a pas d'instruction
-                alert("Veuillez sélectionner un article");
-
+            if (promotion === VALID_PROMOTION_CODE) {
+                price = price - (price * 0.1);
+            }
+            alert(`La valeur de votre panier est de ${price}\u20AC`);
+            
         }
 
     </script>

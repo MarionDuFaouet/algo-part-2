@@ -42,25 +42,20 @@
     </div>
 
     <script type="text/javascript">
+        //affecte valeur à const
+        const EURO_TO_USD = 1.0729
+        //récupère #value
+        let valeur = document.getElementById("value").value;
+        //récupère option currencies
+        let currency = document.getElementById("currencies").value;
 
-        //fonction qui va convertir euros en usd
+        //va convertir valeur
         function convert() {
-            //je récupère la donnée number entrée dans l'#value 
-            let value = document.getElementById("value").value;
-            //je récupère la valeur string eur ou usd
-            let currency = document.getElementById("currencies").value;
-            //variable qui va convertir l'euro en dollars
-            const EURO_TO_USD = 1.0729
-
-            /* 
-             * Number.parseFloat = objet de type number associé à la méthode parseFloat, 
-             * qui va arrondir à deux chiffres après la virgule
-             */
-            if (currency === "eur") 
-                alert( value + " euros " +  "-->" + Number.parseFloat(value * EURO_TO_USD).toFixed(2) + " usd");
+            if (currency === "eur")
+                alert(valeur + " euros --> " + Number.parseFloat(valeur * EURO_TO_USD).toFixed(2) + " dollars");
             
-            else (currency === "usd") 
-                alert( value + " dollars" + "-->" + Number.parseFloat(value / EUR_TO_USD).toFixed(2) + " euros");
+            else
+                alert(valeur + " dollars --> " + Number.parseFloat(valeur / EURO_TO_USD).toFixed(2) + " euros");
         }
     </script>
 </body>
